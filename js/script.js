@@ -64,7 +64,7 @@ function closeModal(){
 
 // }
 
-// ================= MOBILE MENU =================
+
 
 const menuBtn = document.querySelector(".menu-btn");
 
@@ -138,7 +138,7 @@ contactForm.addEventListener("submit", function (e) {
 
 
 
-// ================= ACTIVE NAVBAR LINKS =================
+
 
 const sections = document.querySelectorAll("section");
 
@@ -176,7 +176,7 @@ window.addEventListener("scroll", () => {
 
 
 
-// ================= SCROLL REVEAL EFFECT =================
+
 
 const cards = document.querySelectorAll(
 
@@ -199,5 +199,22 @@ window.addEventListener("scroll", () => {
         }
 
     });
+
+});
+
+
+const showMoreBtn = document.getElementById("showMoreBtn");
+const extraSkills = document.querySelector(".extra-skills");
+
+showMoreBtn.addEventListener("click", () => {
+
+    if(extraSkills.style.display === "grid"){
+        extraSkills.style.display = "none";
+        showMoreBtn.innerText = "Show More";
+    }
+    else{
+        extraSkills.style.display = "grid";
+        showMoreBtn.innerText = "Show Less";
+    }
 
 });
